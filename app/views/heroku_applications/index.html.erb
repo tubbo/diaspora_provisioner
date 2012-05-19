@@ -1,0 +1,29 @@
+<% title "Heroku Applications" %>
+
+<div class="well">
+	<table class="table table-striped">
+	  <thead>
+  	  <tr>
+  	    <th>Name</th>
+  	    <th>Heroku ID</th>
+        <th>Pending?</th>
+        <th></th>
+        <th></th>
+        <th></th>
+  	  </tr>
+  	</thead>
+  	<tbody>
+  	  <% @heroku_applications.each do |heroku_application| %>
+  	    <tr>
+  	      <td><%= heroku_application.name %></td>
+  	      <td><%= heroku_application.heroku_id %></td>
+          <td><%= heroku_application.pending? %></td>
+  	      <td><%= link_to "Show", heroku_application, :class => 'btn btn-mini btn-primary' %></td>
+  	      <td><%= link_to "Edit", edit_heroku_application_path(heroku_application), :class => 'btn btn-mini' %></td>
+  	      <td><%= link_to "Destroy", heroku_application, :confirm => 'Are you sure?', :method => :delete, :class => 'btn btn-mini btn-danger' %></td>
+  	    </tr>
+  	  <% end %>
+  	</tbody>
+	</table>
+</div>
+<p><%= link_to "Make a new app!", heroku_applications_path, :class => 'btn primary', :method => :post %></p>

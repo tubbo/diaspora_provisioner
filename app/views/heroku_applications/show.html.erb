@@ -1,0 +1,22 @@
+<% title "Heroku Application Details" %>
+
+<div class="well">
+  <p>
+    <strong>Name:</strong>
+	  <%= link_to @heroku_application.name, @heroku_application.url %>
+  </p>
+    <p>
+    <strong>Heroku ID:</strong>
+	  <%= @heroku_application.heroku_id %>
+  </p>
+
+  <p>
+    <strong>Pending:</strong>
+    <%= @heroku_application.pending? %>
+  </p>
+  </div>
+<p>
+  <%= link_to "Edit", edit_heroku_application_path(@heroku_application), :class => 'btn' %> |
+  <%= link_to "Destroy", @heroku_application, :confirm => 'Are you sure?', :method => :delete, :class => 'btn' %> |
+  <%= link_to "View All", heroku_applications_path, :class => 'btn btn-danger' %>
+</p>

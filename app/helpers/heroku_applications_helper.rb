@@ -1,0 +1,2 @@
+module HerokuApplicationsHelper
+end
