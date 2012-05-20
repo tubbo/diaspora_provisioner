@@ -32,7 +32,7 @@ group :test do
   gem 'spork', '1.0.0rc3'
   gem 'database_cleaner'
 end
-
+gem 'heroku'
 group :development do
   gem "bootstrapped", :git => 'https://github.com/entropillc/bootstrapped.git'
 end

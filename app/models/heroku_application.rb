@@ -20,7 +20,7 @@ class HerokuApplication < ActiveRecord::Base
   end
   
   def provision_instance
-    HerokuInstance.new(self).create!
+    iHerokuInstance.new(self).create!
   end
 
   def delete_instance
