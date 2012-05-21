@@ -1,7 +1,6 @@
 class HerokuApplication < ActiveRecord::Base
   attr_accessible :none
   after_destroy :delete_instance
-  # after_create :provision_instance
 
   def pending?
     provisioned_at.blank?
@@ -19,8 +18,8 @@ class HerokuApplication < ActiveRecord::Base
     "https://#{name}.herokuapp.com"
   end
   
-  def provision_instance
-    iHerokuInstance.new(self).create!
+  def provision_instance!
+    HerokuProvisioner.new(Diaspora.new(self)).create!
   end
 
   def delete_instance

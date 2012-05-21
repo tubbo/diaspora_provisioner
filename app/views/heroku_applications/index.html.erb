@@ -15,7 +15,7 @@
   	<tbody>
   	  <% @heroku_applications.each do |heroku_application| %>
   	    <tr>
-  	      <td><%= heroku_application.name %></td>
+  	      <td><%= link_to heroku_application.name, heroku_application.url, :target => '_blank'%></td>
   	      <td><%= heroku_application.heroku_id %></td>
           <td><%= heroku_application.pending? %></td>
   	      <td><%= link_to "Show", heroku_application, :class => 'btn btn-mini btn-primary' %></td>

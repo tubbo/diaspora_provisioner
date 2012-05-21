@@ -7,7 +7,7 @@ gem 'rails', '3.2.3'
 
 gem 'sqlite3'
 
-
+gem 'resque'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -35,6 +35,7 @@ end
 gem 'heroku'
 group :development do
   gem "bootstrapped", :git => 'https://github.com/entropillc/bootstrapped.git'
+  gem 'quiet_assets'
 end
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

@@ -15,7 +15,7 @@ class HerokuApplicationsController < ApplicationController
     @heroku_application = HerokuApplication.new(params[:heroku_application])
     if @heroku_application.save
 
-      @heroku_application.provision_instance!
+      Resque.enqueue(CreateDiasporaInstance, @heroku_application.id)
 
       redirect_to @heroku_application, :notice => "New App Created!"
     else
