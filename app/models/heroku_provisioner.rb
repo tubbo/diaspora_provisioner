@@ -63,7 +63,7 @@ class HerokuProvisioner
   end
 
   def add_config_vars
-    Rails.logger.info 'adding config put_config_vars'
+    Rails.logger.info 'adding config vars'
     client.put_config_vars(@app.name, @app.config_vars)
    end
 
