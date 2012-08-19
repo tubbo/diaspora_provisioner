@@ -34,7 +34,7 @@ first, make a config/application.yml with the following keys
 
 
 
-Start your server (after a bundle) and type foreman start to start the resque worker and the rails server.  (make sure redis is started!)
+Start your server (after a bundle, and creating your db tables the normal rails way) and type foreman start to start the resque worker and the rails server.  (make sure redis is started!)
 
 
 
