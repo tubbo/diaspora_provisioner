@@ -1,7 +1,7 @@
 Diaspora Provisioner.
 
 
-This is an app that deploys diaspora instances to heroku, in a single process.
+This is an app that deploys Diaspora instances to heroku, in a single process.
 
 It is a little derpy right now, but with a little love, this/is/could be a one click deploy of D* to the heroku cloud.
 
@@ -33,12 +33,24 @@ first, make a config/application.yml with the following keys
 ~~
 
 
+
+Start your server (after a bundle) and type foreman start to start the resque worker and the rails server.  (make sure redis is started!)
+
+
+
+** how does it work**
+
+Basically, you just supply your HEROKU api, and some s3 creds, and then this connects to heroku, makes a new app on your account, and sets up all the deps for running d* in heroku.
+
+Currently, there is a couple of derpy things, but I am open sourcing this in hope that people 1. run this for their friends, 2) demystifies running d* on your own.
 ** want to help? **
 
 try running this on your own computer, and follow my directions. if something doesnt work, fork the project and send me a pull request.
 
 once we get this running, it would be great to write a more generic guide to getting d* running on heorku.
 
+
+If you want to know the inner workings, app/models/ directory is your friend.
 
 
 **To do**
