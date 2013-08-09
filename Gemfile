@@ -6,6 +6,7 @@ gem 'puma'
 gem 'resque'
 gem 'jquery-rails', '2.2.2'
 gem 'bootstrap-sass'
+gem 'haml-rails'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2'
